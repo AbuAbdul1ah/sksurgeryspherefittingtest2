@@ -1,0 +1,2 @@
+include versioneer.py
+include sksurgeryspherefittingtest2/_version.py

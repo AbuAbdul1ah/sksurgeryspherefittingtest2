@@ -1,0 +1,6 @@
+[run]
+omit = 
+        ./sksurgeryspherefittingtest2/_version.py
+        ./sksurgeryspherefittingtest2/__init__.py
+        ./sksurgeryspherefittingtest2/__main__.py
+        ./sksurgeryspherefittingtest2/ui/sksurgeryspherefittingtest2_command_line.py
