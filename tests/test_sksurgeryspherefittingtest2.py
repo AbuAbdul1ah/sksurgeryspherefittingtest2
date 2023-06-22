@@ -3,8 +3,8 @@
 """scikit-surgery-sphere-fitting-test2 tests"""
 
 #from sksurgeryspherefittingtest2.ui.sksurgeryspherefittingtest2_demo import run_demo
-from sksurgeryspherefittingtest2.algorithms import sphere_fitting
-import numpy
+import numpy 
+from sksurgeryspherefittingtest2.algorithms import sphere_fitting  # pylint: disable=line-too-long
 
 # Pytest style
 # def test_using_pytest_sksurgeryspherefittingtest2():
@@ -19,6 +19,9 @@ import numpy
 #    assert run_demo(x, y, multiply, verbose) == expected_answer
 
 def test_fit_sphere_least_squares():
+    """
+    test_fit_sphere_least_square
+    """
     x_centre = 1.0
     y_centre = 167.0
     z_centre = 200.0
