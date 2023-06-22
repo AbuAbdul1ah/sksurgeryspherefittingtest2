@@ -2,21 +2,8 @@
 
 """scikit-surgery-sphere-fitting-test2 tests"""
 
-#from sksurgeryspherefittingtest2.ui.sksurgeryspherefittingtest2_demo import run_demo
 import numpy 
 from sksurgeryspherefittingtest2.algorithms import sphere_fitting  # pylint: disable=line-too-long
-
-# Pytest style
-# def test_using_pytest_sksurgeryspherefittingtest2():
-#    """First test"""
-#     pylint:disable=invalid-name
-#    x = 1
-#    y = 2
-#    verbose = False
-#    multiply = False
-
-#    expected_answer = 3
-#    assert run_demo(x, y, multiply, verbose) == expected_answer
 
 def test_fit_sphere_least_squares():
     """
