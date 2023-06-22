@@ -2,8 +2,8 @@
 
 """scikit-surgery-sphere-fitting-test2 tests"""
 
-import numpy 
-from sksurgeryspherefittingtest2.algorithms import sphere_fitting  # pylint: disable=line-too-long
+import numpy
+from sksurgeryspherefittingtest2.algorithms import sphere_fitting # pylint: disable=line-too-long
 
 def test_fit_sphere_least_squares():
     """
@@ -24,17 +24,17 @@ def test_fit_sphere_least_squares():
     #a sphere centred at x,y,z with radius radius
     for i in range(1000):
         #make a random vector
-        x=numpy.random.uniform(-1.0, 1.0)
-        y=numpy.random.uniform(-1.0, 1.0)
-        z=numpy.random.uniform(-1.0, 1.0)
+        x_var=numpy.random.uniform(-1.0, 1.0)
+        y_var=numpy.random.uniform(-1.0, 1.0)
+        z_var=numpy.random.uniform(-1.0, 1.0)
 
         #scale it to length radius
-        length=numpy.sqrt( (x)**2 + (y)**2 + (z)**2 )
+        length=numpy.sqrt( (x_var)**2 + (y_var)**2 + (z_var)**2 )
         factor = radius / length
 
-        x_values[i] = x*factor + x_centre
-        y_values[i] = y*factor + y_centre
-        z_values[i] = z*factor + z_centre
+        x_values[i] = x_var*factor + x_centre
+        y_values[i] = y_var*factor + y_centre
+        z_values[i] = z_var*factor + z_centre
 
     parameters = [0.0, 0.0, 0.0, 0.0]
     result = sphere_fitting.fit_sphere_least_squares (x_values,
