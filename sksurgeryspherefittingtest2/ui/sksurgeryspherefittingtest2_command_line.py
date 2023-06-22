@@ -5,13 +5,13 @@
 
 import argparse
 from sksurgeryspherefittingtest2 import __version__
-from sksurgeryspherefittingtest2.ui.sksurgeryspherefittingtest2_demo import run_demo
+from sksurgeryspherefittingtest2.ui.sksurgeryspherefittingtest2_demo import run_demo # pylint: disable=line-too-long
 
 
 def main(args=None):
     """Entry point for scikit-surgery-sphere-fitting-test2 application"""
 
-    parser = argparse.ArgumentParser(description='scikit-surgery-sphere-fitting-test2')
+    parser = argparse.ArgumentParser(description='scikit-surgery-sphere-fitting-test2') # pylint: disable=line-too-long
 
     ## ADD POSITIONAL ARGUMENTS
     parser.add_argument("x",
@@ -38,7 +38,7 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='scikit-surgery-sphere-fitting-test2 version ' + friendly_version_string)
+        version='scikit-surgery-sphere-fitting-test2 version ' + friendly_version_string) # pylint: disable=line-too-long
 
     args = parser.parse_args(args)
 
