@@ -1,6 +1,6 @@
 # coding=utf-8
 """
-Setup for scikit-surgery-sphere-fitting-test2
+Setup for scikit-surgery-sphere-fitting
 """
 
 from setuptools import setup, find_packages
@@ -11,15 +11,18 @@ with open('README.rst') as f:
     long_description = f.read()
 
 setup(
-    name='scikit-surgery-sphere-fitting-test2',
+    name='scikit-surgery-sphere-fitting',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
-    description='scikit-surgery-sphere-fitting-test2 is a Python package',
+    description='scikit-surgery-sphere-fitting implements a
+                  least squares sphere fitting algorithm,
+                  to read a vtk poly data file, a config file, and
+                  outputs the fitted sphere',
     long_description=long_description,
     long_description_content_type='text/x-rst',
-    url='https://github.com/AbuAbdul1ah/sksurgeryspherefittingtest2',
-    author='Sujon Hekim',
-    author_email='YOUR-EMAIL@ucl.ac.uk',
+    url='https://github.com/StephenThompson/sksurgeryspherefitting',
+    author='Stephen Thompson',
+    author_email='s.thompson@ucl.ac.uk',
     license='BSD-3 license',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -34,7 +37,6 @@ setup(
 
 
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
 
         'Topic :: Scientific/Engineering :: Information Analysis',
@@ -47,19 +49,20 @@ setup(
         exclude=[
             'doc',
             'tests',
+            'data'
         ]
     ),
 
     install_requires=[
         'numpy>=1.11',
-        'scipy',
-        'vtk>=9.2.6',
-        'scikit-surgeryvtk>=2.0.1'
+        'spicy',
+        'vtk>=9.2.5',
+        'scikit-surgeryvtk==2.0rc0'
     ],
 
     entry_points={
         'console_scripts': [
-            'sksurgeryspherefittingtest2=sksurgeryspherefittingtest2.__main__:main',
+            'sksurgeryspherefitting=sksurgeryspherefitting.__main__:main',
         ],
     },
 )
