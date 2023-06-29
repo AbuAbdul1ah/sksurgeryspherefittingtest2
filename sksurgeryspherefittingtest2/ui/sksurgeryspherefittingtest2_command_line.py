@@ -6,31 +6,23 @@
 import argparse
 from sksurgeryspherefittingtest2 import __version__
 from sksurgeryspherefittingtest2.ui.sksurgeryspherefittingtest2_demo import run_demo # pylint: disable=line-too-long
-
-
 def main(args=None):
-    """Entry point for scikit-surgery-sphere-fitting-test2 application"""
+    """Entry point for scikit-surgery-sphere-fitting application"""
 
-    parser = argparse.ArgumentParser(description='scikit-surgery-sphere-fitting-test2') # pylint: disable=line-too-long
+    parser = argparse.ArgumentParser(
+        description='scikit-surgery-sphere-fitting')
 
     ## ADD POSITIONAL ARGUMENTS
-    parser.add_argument("x",
-                        type=int,
-                        help="1st number")
+    parser.add_argument("model",
+                        type=str,
+                        help="Filename for vtk surface model")
 
-    parser.add_argument("y",
-                        type=int,
-                        help="2nd number")
-
-    # ADD OPTINAL ARGUMENTS
-    parser.add_argument("-m", "--multiply",
-                        action="store_true",
-                        help="Enable multiplication of inputs."
-                        )
-
-    parser.add_argument("-v", "--verbose",
-                        action="store_true",
-                        help="Enable verbose output",
+    # ADD OPTIONAL ARGUMENTS
+    parser.add_argument("-o", "--output",
+                        required=False,
+                        type=str,
+                        default="",
+                        help="Write the fitted sphere to file"
                         )
 
     version_string = __version__
@@ -38,8 +30,8 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='scikit-surgery-sphere-fitting-test2 version ' + friendly_version_string) # pylint: disable=line-too-long
-
+        version='scikit-surgery-sphere-fitting version '
+        + friendly_version_string
+        )
     args = parser.parse_args(args)
-
-    run_demo(args.x, args.y, args.multiply, args.verbose)
+    run_demo(args.model, args.output)
