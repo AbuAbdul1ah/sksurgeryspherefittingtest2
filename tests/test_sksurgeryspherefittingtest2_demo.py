@@ -12,3 +12,4 @@ def test_fit_sphere_least_sqs_demo():
     output_name = 'out_temp.vtp'
 
     run_demo(model_name, output_name)
+    
