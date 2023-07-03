@@ -1,5 +1,5 @@
 scikit-surgery-sphere-fitting-test2
-===============================
+===================================
 
 .. image:: https://github.com/AbuAbdul1ah/sksurgeryspherefittingtest2/raw/master/project-icon.png
    :height: 128px
